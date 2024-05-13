@@ -75,6 +75,21 @@ sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
+// JavaScript for modal popup
+var sponsorModal = document.getElementById("sponsorModal");
+var sponsorBtn = document.getElementById("sponsorBtn");
+var closeBtn = document.getElementsByClassName("close")[0];
 
+sponsorBtn.onclick = function() {
+    sponsorModal.style.display = "block";
+}
 
+closeBtn.onclick = function() {
+    sponsorModal.style.display = "none";
+}
 
+window.onclick = function(event) {
+    if (event.target == sponsorModal) {
+        sponsorModal.style.display = "none";
+    }
+}
